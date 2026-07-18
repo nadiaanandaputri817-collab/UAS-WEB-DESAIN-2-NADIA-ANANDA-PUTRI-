@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tentang Kami | Sempol Ayam M.P</title>
+
+<!-- AOS Animation -->
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+/* Navbar */
+
+.navbar{
+background:rgba(255,220,235,.95);
+backdrop-filter:blur(10px);
+box-shadow:0 5px 20px rgba(231,84,128,.15);
+}
+
+
+.navbar-brand{
+font-weight:bold;
+font-size:28px;
+color:#e75480!important;
+}
+
+.nav-link{
+font-weight:500;
+margin-left:15px;
+transition:.3s;
+color:#7a4055!important;
+}
+.nav-link:hover{
+color:#e75480!important;
+}
+
+
+/* ==========================
+   Sakura Falling Animation
+========================== */
+
+.sakura{
+    position:absolute;
+    top:-60px;
+    color:#ff8fb7;
+    font-size:22px;
+    opacity:.8;
+    pointer-events:none;
+    animation:sakuraFall linear infinite;
+    z-index:1;
+}
+
+.sakura:nth-child(1){
+    left:5%;
+    animation-duration:12s;
+    animation-delay:0s;
+}
+
+.sakura:nth-child(2){
+    left:18%;
+    animation-duration:10s;
+    animation-delay:2s;
+    font-size:18px;
+}
+
+.sakura:nth-child(3){
+    left:30%;
+    animation-duration:14s;
+    animation-delay:4s;
+}
+
+.sakura:nth-child(4){
+    left:45%;
+    animation-duration:11s;
+    animation-delay:1s;
+    font-size:26px;
+}
+
+.sakura:nth-child(5){
+    left:60%;
+    animation-duration:13s;
+    animation-delay:3s;
+}
+
+.sakura:nth-child(6){
+    left:75%;
+    animation-duration:15s;
+    animation-delay:5s;
+}
+
+.sakura:nth-child(7){
+    left:90%;
+    animation-duration:12s;
+    animation-delay:2s;
+}
+
+@keyframes sakuraFall{
+
+0%{
+    transform:translateY(-50px) translateX(0) rotate(0deg);
+    opacity:0;
+}
+
+10%{
+    opacity:1;
+}
+
+50%{
+    transform:translateY(50vh) translateX(30px) rotate(180deg);
+}
+
+100%{
+    transform:translateY(110vh) translateX(-30px) rotate(360deg);
+    opacity:0;
+}
+
+}
+
+/* ==========================
+   Bubble Background
+========================== */
+
+.tentang-section{
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(180deg,#fff7fb,#ffe6f0);
+}
+
+.container{
+    position:relative;
+    z-index:2;
+}
+
+/* Bubble */
+
+.bubble{
+    position:absolute;
+    bottom:-150px;
+    border-radius:50%;
+    background:rgba(255,182,193,.35);
+    animation:bubble 18s linear infinite;
+    backdrop-filter:blur(3px);
+}
+
+.bubble:nth-child(1){
+    width:60px;
+    height:60px;
+    left:5%;
+    animation-duration:15s;
+}
+
+.bubble:nth-child(2){
+    width:35px;
+    height:35px;
+    left:18%;
+    animation-duration:10s;
+    animation-delay:2s;
+}
+
+.bubble:nth-child(3){
+    width:90px;
+    height:90px;
+    left:35%;
+    animation-duration:18s;
+}
+
+.bubble:nth-child(4){
+    width:45px;
+    height:45px;
+    left:50%;
+    animation-duration:13s;
+    animation-delay:3s;
+}
+
+.bubble:nth-child(5){
+    width:70px;
+    height:70px;
+    left:65%;
+    animation-duration:16s;
+}
+
+.bubble:nth-child(6){
+    width:40px;
+    height:40px;
+    left:80%;
+    animation-duration:11s;
+    animation-delay:1s;
+}
+
+.bubble:nth-child(7){
+    width:100px;
+    height:100px;
+    left:90%;
+    animation-duration:20s;
+}
+
+@keyframes bubble{
+
+0%{
+    transform:translateY(0) scale(1);
+    opacity:.2;
+}
+
+50%{
+    opacity:.5;
+}
+
+100%{
+    transform:translateY(-120vh) scale(1.3);
+    opacity:0;
+}
+
+}
+
+/*==========================
+      TENTANG KAMI
+===========================*/
+
+body{
+    font-family:'Poppins',sans-serif;
+    margin:0;
+    padding:0;
+    position:relative;
+    overflow-x:hidden;
+}
+
+.foto{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+    z-index:-2;
+}
+
+.foto-overlay{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(255,240,246,0.55);
+    z-index:-1;
+}
+
+.tentang-section{
+    position:relative;
+    overflow:hidden;
+    padding:90px 0;
+    background:transparent;
+}
+.badge-tentang{
+    display:inline-block;
+    background:#ff8fb7;
+    color:white;
+    padding:10px 30px;
+    border-radius:50px;
+    font-size:15px;
+    margin-bottom:20px;
+    box-shadow:0 8px 20px rgba(255,105,180,.3);
+}
+
+.tentang-section h2{
+    color:#ff4f8b;
+    font-weight:bold;
+}
+
+.tentang-section h2 span{
+    color:#ff87b5;
+}
+
+.subjudul{
+    color:#666;
+    max-width:650px;
+    margin:auto;
+    margin-top:15px;
+}
+
+.card-about{
+    position: relative;
+    overflow: hidden;
+
+    background: rgba(255,255,255,.28);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border:1px solid rgba(255,255,255,.4);
+    border-radius:28px;
+
+    padding:35px;
+    height:100%;
+
+    transform-style: preserve-3d;
+    perspective:1000px;
+
+    transition:
+        transform .18s ease,
+        box-shadow .18s ease;
+
+    box-shadow:
+        0 10px 30px rgba(255,105,180,.15);
+}
+
+.card-about::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+    130deg,
+    transparent 30%,
+    rgba(255,255,255,.35),
+    transparent 70%);
+
+    opacity:0;
+
+    transition:.5s;
+
+}
+
+.card-about:hover::after{
+
+    opacity:1;
+
+}
+
+.card-about::before{
+    content:"";
+    position:absolute;
+
+    top:-50%;
+    left:-70%;
+
+    width:70%;
+    height:200%;
+
+    background:linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.45),
+        transparent
+    );
+
+    transform:rotate(25deg);
+
+    transition:.8s;
+}
+
+.card-about:hover{
+
+    transform:
+        translateY(-12px)
+        scale(1.03);
+
+    border:1px solid rgba(255,255,255,.8);
+
+    box-shadow:
+        0 20px 45px rgba(255,105,180,.35),
+        0 0 30px rgba(255,182,193,.35);
+
+}
+.icon-box{
+
+    width:90px;
+    height:90px;
+
+    margin:auto;
+    margin-bottom:25px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:50%;
+
+    background:
+    linear-gradient(
+    135deg,
+    #ff8fb7,
+    #ffc9dd);
+
+    color:white;
+    font-size:38px;
+
+    box-shadow:
+    0 10px 25px rgba(255,105,180,.35);
+
+    transition:.5s;
+    transform: translateZ(35px);
+}
+.icon-box{
+
+transition:
+transform .3s ease,
+box-shadow .3s ease;
+
+}
+
+.card-about:hover .icon-box{
+
+transform:
+translateZ(50px)
+scale(1.15)
+rotate(360deg);
+
+}
+
+.card-about:hover .icon-box{
+
+    transform:
+        rotate(360deg)
+        scale(1.15);
+
+    box-shadow:
+        0 15px 35px rgba(255,105,180,.45);
+
+}
+
+.card-about h4{
+    text-align:center;
+    color:#ff4f8b;
+    margin-bottom:20px;
+    font-weight:bold;
+    transform: translateZ(35px);
+}
+
+.card-about p{
+    text-align:justify;
+    color:#555;
+    line-height:1.8;
+    transform: translateZ(35px);
+}
+
+.card-about ul{
+    padding-left:20px;
+    color:#555;
+    transform: translateZ(35px);
+}
+
+.card-about li{
+    margin-bottom:8px;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(60px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+/* Footer */
+footer{
+background:#e75480;
+color:white;
+padding:30px;
+}
+
+.social a{
+font-size:25px;
+margin:10px;
+color:white;
+transition:.3s;
+}
+.social a:hover{
+color:#ffdbea;
+}
+/* Responsive */
+@media(max-width:768px){
+.hero{
+text-align:center;
+padding:50px 20px;
+}
+
+.hero h1{
+font-size:38px;
+}
+.hero p{
+font-size:16px;
+}
+.btn-order,.btn-menu{
+display:block;
+margin:15px auto;
+width:220px;
+}
+.section-title{
+font-size:30px;
+}
+}
+</style>
+<!-- Navbar -->
+
+<nav class="navbar navbar-expand-lg sticky-top">
+
+<div class="container">
+
+<a class="navbar-brand" href="index.html">
+🍢 Sempol Ayam M.P
+</a>
+
+<button class="navbar-toggler"
+data-bs-toggle="collapse"
+data-bs-target="#menu">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+<div class="collapse navbar-collapse"
+id="menu">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+<a class="nav-link" href="home.html">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="produk.html">Produk</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="tentang.html">Tentang</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="galeri.html">Galeri</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link active" href="kontak.html">Kontak</a>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</nav>
+</head>
+<body>
+
+<img src="sempol.jpeg" class="foto" alt="Background">
+
+<div class="foto-overlay"></div>
+
+<section class="tentang-section">
+<!-- Sakura -->
+
+<div class="sakura">🌸</div>
+<div class="sakura">🌸</div>
+<div class="sakura">🌸</div>
+<div class="sakura">🌸</div>
+<div class="sakura">🌸</div>
+<div class="sakura">🌸</div>
+<div class="sakura">🌸</div>
+
+<!-- Bubble Background -->
+
+<div class="bubble"></div>
+<div class="bubble"></div>
+<div class="bubble"></div>
+<div class="bubble"></div>
+<div class="bubble"></div>
+<div class="bubble"></div>
+<div class="bubble"></div>
+
+<div class="container">
+
+<div class="text-center mb-5"
+     data-aos="fade-down"
+     data-aos-duration="1000">
+
+    <div class="badge-tentang">
+        🌸 Tentang Kami
+    </div>
+
+    <h2 class="display-5">
+        Sempol Ayam <span>M.P</span>
+    </h2>
+
+    <p class="subjudul">
+        Menghadirkan sempol ayam berkualitas, lezat, higienis, dan dibuat menggunakan bahan-bahan pilihan terbaik.
+    </p>
+
+</div>
+
+<div class="row g-4">
+
+<!-- Sejarah -->
+
+<div class="col-lg-4"
+     data-aos="fade-right"
+     data-aos-duration="1200">
+
+    <div class="card-about">
+
+        <div class="icon-box">
+            <i class="fas fa-store"></i>
+        </div>
+
+        <h4>Sejarah Berdiri</h4>
+         <p>
+            <b>UMKM Sempol Ayam M.P</b>  merupakan usaha kuliner yang bergerak di bidang makanan 
+            ringan dengan produk utama berupa sempol ayam. Usaha ini didirikan dengan tujuan untuk menyediakan 
+            jajanan yang memiliki cita rasa lezat, berkualitas, serta dapat dinikmati oleh berbagai kalangan masyarakat.
+        </p>
+        <p>
+            <b>Sempol Ayam M.P</b> berawal dari usaha rumahan yang ingin 
+            menghadirkan jajanan sempol ayam dengan rasa yang lezat, harga terjangkau, dan kualitas terbaik. 
+            Berkat cita rasa yang khas, usaha ini berkembang dari penjualan kepada tetangga dan teman hingga 
+            melayani pemesanan secara offline maupun online.
+        </p>
+
+    </div>
+
+</div>
+
+<!-- VISI MISI -->
+
+<div class="col-lg-4"
+     data-aos="zoom-in"
+     data-aos-duration="1200"
+     data-aos-delay="200">
+
+    <div class="card-about">
+
+        <div class="icon-box">
+            <i class="fas fa-bullseye"></i>
+        </div>
+
+        <h4>Visi & Misi</h4>
+        <b>Visi</b>
+        <p>
+           Menjadi UMKM kuliner yang terpercaya dalam menyediakan sempol ayam 
+           berkualitas, lezat, higienis, dan menjadi pilihan utama masyarakat.
+        </p>
+        <b>Misi</b>
+    <ul>
+        <li>Menghasilkan produk sempol ayam dengan menggunakan bahan baku segar dan berkualitas.</li>
+        <li>Menjaga kebersihan dan keamanan dalam setiap proses produksi.</li>
+        <li>Memberikan cita rasa yang khas dengan harga yang terjangkau.</li>
+        <li>Memberikan pelayanan terbaik kepada pelanggan.</li>
+        <li>Mengembangkan pemasaran produk melalui media offline maupun online.</li>
+    </ul>
+    </div>
+</div>
+
+<!-- KEUNGGULAN -->
+
+<div class="col-lg-4"
+ data-aos="fade-left"
+ data-aos-duration="1200"
+data-aos-delay="400">
+<div class="card-about">
+<div class="icon-box">
+<i class="fas fa-star"></i>
+</div>
+
+<h4>Keunggulan Produk</h4>
+<ul>
+<li>✔ Menggunakan ayam segar berkualitas.</li>
+<li>✔ Tanpa bahan pengawet.</li>
+<li>✔ Diproses secara higienis.</li>
+<li>✔ Tekstur kenyal dan gurih.</li>
+<li>✔ Harga ramah di kantong.</li>
+<li>✔ Cocok untuk semua usia.</li>
+</ul>
+
+<p>
+Sempol ayam memiliki peluang usaha yang sangat baik karena bahan bakunya mudah diperoleh, proses pembuatannya sederhana, serta pemasarannya dapat dilakukan secara offline maupun online melalui WhatsApp, Instagram, Facebook, maupun marketplace.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({
+    duration: 1200,
+    once: true,
+    offset: 100,
+    easing: "ease-in-out"
+});
+</script>
+<script>
+
+const cards=document.querySelectorAll(".card-about");
+
+cards.forEach(card=>{
+
+card.addEventListener("mousemove",(e)=>{
+
+const rect=card.getBoundingClientRect();
+
+const x=e.clientX-rect.left;
+
+const y=e.clientY-rect.top;
+
+const centerX=rect.width/2;
+
+const centerY=rect.height/2;
+
+const rotateX=((y-centerY)/18)*-1;
+
+const rotateY=(x-centerX)/18;
+
+card.style.transform=
+`perspective(1000px)
+ rotateX(${rotateX}deg)
+ rotateY(${rotateY}deg)
+ scale(1.04)`;
+
+});
+
+card.addEventListener("mouseleave",()=>{
+
+card.style.transform=
+"perspective(1000px) rotateX(0) rotateY(0) scale(1)";
+
+});
+
+});
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Footer -->
+<footer>
+<div class="container text-center">
+<h3>
+Sempol Ayam M.P
+</h3>
+<p>
+Lezat • Higienis • Berkualitas
+</p>
+<div class="social">
+<a href="#"><i class="fab fa-facebook"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-whatsapp"></i></a>
+<a href="#"><i class="fab fa-tiktok"></i></a>
+</div>
+<p class="mt-4">
+© 2026 Sempol Ayam M.P.
+</p>
+</div>
+</footer>
+</body>
+</html>

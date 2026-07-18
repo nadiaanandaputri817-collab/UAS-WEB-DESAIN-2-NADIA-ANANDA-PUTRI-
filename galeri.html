@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Galeri | Sempol Ayam M.P</title>
+
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+<!-- Font Awesome -->
+<link rel="stylesheet" 
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+
+<style>
+
+
+/* BODY */
+
+body{
+
+    font-family:'Poppins', Arial, sans-serif;
+    background:#fff4f8;
+
+}
+
+/* NAVBAR */
+
+.navbar{
+
+    background:linear-gradient(
+    135deg,
+    #ff8fb1,
+    #ffc1d6);
+
+    box-shadow:
+    0 5px 20px rgba(255,143,177,0.4);
+
+}
+
+.navbar-brand{
+
+    font-size:22px;
+    animation:bergerak 3s infinite;
+
+}
+
+
+/* ANIMASI NAVBAR */
+
+@keyframes bergerak{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+
+50%{
+
+transform:translateY(-5px);
+
+}
+
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+/* JUDUL */
+
+.judul{
+
+    color:#e75480;
+    font-weight:800;
+    font-size:40px;
+
+}
+
+
+/* BUTTON */
+
+.filter-btn{
+
+    border-radius:50px;
+    padding:12px 30px;
+    margin:5px;
+
+    font-weight:bold;
+
+    transition:0.4s;
+
+}
+
+.filter-btn:hover{
+
+    transform:translateY(-5px) scale(1.1);
+
+}
+
+
+.btn-danger{
+
+    background:#ff8fb1;
+    border:none;
+
+}
+
+
+.btn-outline-danger{
+
+    color:#e75480;
+    border:2px solid #ff8fb1;
+
+}
+
+.btn-outline-danger:hover{
+
+    background:#ff8fb1;
+    color:white;
+
+}
+
+/* CARD */
+
+.card{
+
+    border:none;
+    border-radius:25px;
+    overflow:hidden;
+
+    transition:0.5s;
+
+    background:white;
+
+}
+
+.card:hover{
+
+    transform:
+    translateY(-15px);
+
+    box-shadow:
+    0 15px 35px
+    rgba(255,143,177,0.35);
+
+}
+
+/* GAMBAR */
+
+
+.card img{
+
+    width:100%;
+    height:260px;
+
+    object-fit:cover;
+
+    transition:0.6s;
+
+}
+
+.card:hover img{
+
+    transform:scale(1.15);
+
+}
+
+
+/* TEXT */
+
+.card-body{
+
+    padding:25px;
+
+}
+
+.card-body h5{
+
+    color:#e75480;
+    font-weight:bold;
+
+}
+
+
+
+.card-body p{
+
+    color:#777;
+
+}
+
+/* ANIMASI GALERI */
+
+
+.galeri-item{
+
+    animation: muncul 0.8s ease;
+
+}
+
+
+
+@keyframes muncul{
+
+
+from{
+
+opacity:0;
+
+transform:translateY(50px);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+
+}
+
+
+/* RESPONSIVE */
+
+
+@media(max-width:768px){
+
+
+.judul{
+
+font-size:30px;
+
+}
+
+.card img{
+
+height:220px;
+
+}
+
+}
+/* Footer */
+footer{
+background:#e75480;
+color:white;
+padding:30px;
+}
+
+.social a{
+font-size:25px;
+margin:10px;
+color:white;
+transition:.3s;
+}
+.social a:hover{
+color:#ffdbea;
+}
+/* Responsive */
+@media(max-width:768px){
+.hero{
+text-align:center;
+padding:50px 20px;
+}
+
+.hero h1{
+font-size:38px;
+}
+.hero p{
+font-size:16px;
+}
+.btn-order,.btn-menu{
+display:block;
+margin:15px auto;
+width:220px;
+}
+.section-title{
+font-size:30px;
+}
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+
+<nav class="navbar navbar-expand-lg sticky-top">
+
+<div class="container">
+
+<a class="navbar-brand" href="index.html">
+🍢 Sempol Ayam M.P
+</a>
+
+<button class="navbar-toggler"
+data-bs-toggle="collapse"
+data-bs-target="#menu">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+<div class="collapse navbar-collapse"
+id="menu">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+<a class="nav-link" href="home.html">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="produk.html">Produk</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="tentang.html">Tentang</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="galeri.html">Galeri</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link active" href="kontak.html">Kontak</a>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</nav>
+
+<!-- GALERI -->
+
+
+<section class="py-5">
+
+
+<div class="container">
+
+
+
+<div class="text-center mb-5">
+
+
+<h1 class="judul">
+
+Galeri Sempol Ayam M.P
+
+</h1>
+
+
+<p class="text-muted">
+
+Dokumentasi produk, proses pembuatan,
+dan kemasan UMKM kami.
+
+</p>
+
+
+</div>
+
+
+<!-- FILTER -->
+
+<div class="text-center mb-4">
+
+<button class="btn btn-danger filter-btn"
+onclick="filterGaleri('semua')">
+
+Semua
+
+</button>
+
+<button class="btn btn-outline-danger filter-btn"
+onclick="filterGaleri('produk')">
+
+Produk
+
+</button>
+<button class="btn btn-outline-danger filter-btn"
+onclick="filterGaleri('produksi')">Produksi
+</button>
+<button class="btn btn-outline-danger filter-btn"
+onclick="filterGaleri('kemasan')">Kemasan
+</button>
+</div>
+<div class="row g-4">
+
+<!-- PRODUK -->
+
+<div class="col-md-4 galeri-item produk">
+<div class="card shadow">
+<img src="sempol_original.jfif">
+<div class="card-body text-center">
+<h5>
+Sempol Ayam Original
+</h5>
+<p>
+Sempol ayam gurih dengan
+bahan berkualitas.
+</p>
+</div>
+</div>
+</div>
+<div class="col-md-4 galeri-item produk">
+<div class="card shadow">
+<img src="pedas.jfif">
+<div class="card-body text-center">
+<h5>
+Sempol Ayam Pedas
+</h5>
+<p>
+Varian pedas favorit pelanggan.
+</p>
+</div>
+</div>
+</div>
+
+<!-- PRODUKSI -->
+<div class="col-md-4 galeri-item produksi">
+<div class="card shadow">
+<img src="proses.jpg">
+<div class="card-body text-center">
+<h5>
+Proses Pembuatan
+</h5>
+<p>
+Pemilihan bahan dan proses
+pembuatan sempol.
+</p>
+</div>
+</div>
+</div>
+<div class="col-md-4 galeri-item produksi">
+<div class="card shadow">
+<img src="memasak.jpg">
+<div class="card-body text-center">
+<h5>
+Proses Memasak
+</h5>
+<p>
+Pengolahan produk dengan
+kualitas terbaik.
+</p>
+</div>
+</div>
+</div>
+
+<!-- KEMASAN -->
+
+<div class="col-md-4 galeri-item kemasan">
+<div class="card shadow">
+<img src="kemasan.jpeg">
+<div class="card-body text-center">
+<h5>
+Kemasan Produk
+</h5>
+<p>
+Kemasan menarik dan higienis.
+</p>
+</div>
+</div>
+</div>
+<div class="col-md-4 galeri-item kemasan">
+<div class="card shadow">
+<img src="dijual.jfif">
+<div class="card-body text-center">
+<h5>
+Produk Siap Dijual
+</h5>
+<p>
+Siap diterima pelanggan.
+</p>
+</div>
+
+</div>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- SCRIPT FILTER -->
+
+<script>
+
+function filterGaleri(kategori){
+
+
+let item =
+document.querySelectorAll(".galeri-item");
+
+
+
+item.forEach(function(data){
+
+
+if(kategori=="semua"){
+
+
+data.style.display="block";
+
+
+}
+
+
+else if(data.classList.contains(kategori)){
+
+
+data.style.display="block";
+
+
+}
+
+
+else{
+
+
+data.style.display="none";
+
+
+}
+
+
+});
+
+
+}
+
+</script>
+
+<!-- Footer -->
+<footer>
+<div class="container text-center">
+<h3>
+Sempol Ayam M.P
+</h3>
+<p>
+Lezat • Higienis • Berkualitas
+</p>
+<div class="social">
+<a href="#"><i class="fab fa-facebook"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-whatsapp"></i></a>
+<a href="#"><i class="fab fa-tiktok"></i></a>
+</div>
+<p class="mt-4">
+© 2026 Sempol Ayam M.P.
+</p>
+</div>
+</footer>
+
+</body>
+
+</html>
